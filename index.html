@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Title of the document</title>
+    <meta charset="UTF-8">
+    <title>MyChat</title>
 </head>
 
 <body>
-Content of the document......
+<h1>MyChat</h1><br>
+
+<form action="" name="form">
+<input type = "text" name="LOGIN" size="50" id="username"><br>
+<input type = "password" name="PASSWORD" size="50" id="password"><br>
+<input type = "submit" name="SUBMIT" value="LOG ING" onclick="Comprobar()"><br>
+</form>
+
+<script>
+    var username = document.form.LOGIN.value;
+    var password = document.form.PASSWORD.value;
+    var wrong_password = "WrongPassword";
+    var right = "Welcome";
+
+    function Comprobar() {
+
+            if(username==password){
+                document.write(right);
+            }else{
+                document.write(wrong_password);
+            }
+    }
+</script>
+
 </body>
 
 </html>
