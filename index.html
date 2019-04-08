@@ -6,29 +6,26 @@
 </head>
 
 <body>
-<h1>MyChat</h1><br>
+    <h1>MyChat</h1><br>
 
-<form action="" name="form">
-<input type = "text" name="LOGIN" size="50" id="username"><br>
-<input type = "password" name="PASSWORD" size="50" id="password"><br>
-<input type = "submit" name="SUBMIT" value="LOG ING" onclick="Comprobar()"><br>
-</form>
+    <form action="" name="form">
+        <input type="text" name="LOGIN" size="50" id="username"><br>
+        <input type="password" name="PASSWORD" size="50" id="password"><br>
+        <input type="submit" name="SUBMIT" value="LOG ING" onclick="Comprobar()"><br>
+    </form>
 
-<script>
-    var username = document.form.LOGIN.value;
-    var password = document.form.PASSWORD.value;
-    var wrong_password = "WrongPassword";
-    var right = "Welcome";
+    <script>
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
 
-    function Comprobar() {
-
-            if(username==password){
-                document.write(right);
-            }else{
-                document.write(wrong_password);
+        function Comprobar() {
+            if (username.value == password.value) {
+                document.write("WELCOME :D");
+            } else {
+                document.write("INCORRECT CREDENTIAL");
             }
-    }
-</script>
+        }
+    </script>
 
 </body>
 
